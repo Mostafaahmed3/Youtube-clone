@@ -23,20 +23,23 @@ header{
     display: flex;
     align-items: center;
     cursor: pointer;
+    width: 25%;
 }
 .youtube-logo img{
-    width: 64%;
+    width: 150px;
     padding-left: 16px;
 }
 .search{
     display: flex;
     align-items: center;
     margin-left: -9px;
+    width: 50%;
 }
 .search form{
     display: flex;
     height: 40px;
-    width: 628px;
+    width: 100%;
+
 
 }
 .search input{
@@ -73,8 +76,15 @@ header{
 .right-element{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    width: 75%;
+    justify-content: space-between;
+}
+.icons{
+    display: flex;
 }
 .right-element a{
+
     padding-right: 18px;
     text-decoration: none;
     color: black;
@@ -84,6 +94,7 @@ header{
    
     display: flex;
     background-color: #f9f9f9;
+    position: relative;
     
 }
 aside{
@@ -232,6 +243,44 @@ main::-webkit-scrollbar-thumb {
     color: black;
 }
 
+@media (max-width:863px){
+    .search input{
+        display: none;
+
+    }
+    .right-element{
+        justify-content: flex-end;
+    }
+    .search{
+        width: auto;
+    }
+    aside {
+        width: auto;
+        position: fixed;
+        top: 50px;
+        left: 0;
+    }
+
+    main {
+        padding-left: 70px;
+        width: auto;
+    }
+
+    nav a span, nav p {
+        display: none;
+    }
+
+}
+@media(max-width:495px){
+    .youtube-logo img{
+        display: none;
+    }
+}
+@media (max-width:1120px  min-width:1012px){
+    .video {
+            width: 351px;
+    }
+}
 
 
 
